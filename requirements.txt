@@ -1,0 +1,8 @@
+fastApi
+uvicorn
+sqlalchemy
+pymysql
+alembic
+jinja2
+sqlalchemy_imageattach
+Wand

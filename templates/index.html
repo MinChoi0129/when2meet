@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2M</title>
+    <script>
+        let groupList = []
+
+        function getGroupList() {
+            fetch("http://127.0.0.1:8000/group")
+                .then((response) => {
+                    return response.json();
+                    console.log(response)
+                })
+                .then((json) => {
+                    groupList = json;
+                    console.log(groupList)
+                    displayGroupList();
+                })
+                    }
+
+        function displayGroupList() {
+            const listContainer = document.getElementById("groupList");
+
+            // Clear previous content
+            listContainer.innerHTML = "";
+
+            // Iterate through groupList and append each item to the list
+            groupList.forEach(group => {
+                const listItem = document.createElement("li");
+                listItem.textContent = group.name;
+                listContainer.appendChild(listItem);
+            });
+        }
+
+        // Attach the getGroupList function to the DOMContentLoaded event
+        document.addEventListener("DOMContentLoaded", getGroupList);
+    </script>
+</head>
+
+<body>
+    간단한게 적어본 데이터가져와서 쓰기
+    <ul id="groupList"></ul>
+</body>
+
+</html>
+dfdf

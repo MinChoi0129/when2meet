@@ -1,0 +1,5 @@
+# 맨날 찾기 귀찮아서 적어놓은 migrations명령어
+1. alembic init migrations
+2. alembic revision --autogenerate
+3. alembic upgrade head
+> db가 새로 생김
