@@ -1,0 +1,136 @@
+body {
+    background-color: #F6F7F9;
+    display: flex;
+    overflow: hidden;
+}
+
+#selected {
+    color: #164DCA;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#byesick {
+    position: fixed;
+    bottom: 3rem;
+}
+
+.left_section {
+    width: min(21.9%, 421px);
+    height: 100vh;
+    background-color: white;
+}
+
+.left_section a {
+    text-decoration: none;
+    color: #686868;
+    font-weight: 500;
+}
+
+.left_section li {
+    font-size: 18px;
+    margin: 3rem 0 3rem 4vw;
+}
+
+.left_section img {
+    margin: 0 0 0 4vw;
+    transform: translate(-25px, 1.5rem);
+}
+
+.left_section h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #164DCA;
+    margin: 4rem 0 4rem 4vw
+}
+
+.right_section {
+    width: 60vw;
+    margin: 15vh 0 0 5vw;
+    height: 85vh;
+    background-color: white;
+    border-radius: 313px 0 0 0;
+    overflow: scroll;
+    padding: 106px 0 0 8vw;
+    text-align: center;
+    align-items: center;
+}
+
+.right_section::-webkit-scrollbar {
+    background-color: white;
+}
+
+.right_section::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+}
+
+.right_menu {
+    margin: 15vh 0 0 0;
+}
+
+.right_menu_item {
+    background-color: white;
+    width: 160px;
+    height: 64px;
+    border-radius: 0 22px 22px 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding-left: 3rem;
+    margin-right: 6rem;
+    line-height: 64px;
+    font-size: 20px;
+}
+
+
+
+.days,
+.row {
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+}
+
+.day {
+    width: 5vw;
+    height: 4vh;
+    margin: 0 0.2rem 0 0.2rem;
+    color: #828282;
+    font-weight: 200;
+}
+
+.time {
+    width: 5vw;
+    height: 6vh;
+    margin: 0 0.2rem 0 0.2rem;
+    padding-top: 1.3vh;
+    color: #828282;
+    font-weight: 200;
+}
+
+.tableElement {
+    width: 5vw;
+    height: 6vh;
+    background-color: #BDC5FF;
+    margin: 0.2rem;
+    border-radius: 15px;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 40%);
+}
+
+.top_nav_bar {
+    position: absolute;
+    /* width: 100%; */
+    height: 5vh;
+    padding-top: 3rem;
+    right: 6rem;
+    text-align: right;
+    font-weight: 700;
+}
+
+.info_btn {
+    position: absolute;
+    bottom: 3rem;
+    right: 6rem;
+    font-size: 40px;
+    color: #164DCA;
+}
