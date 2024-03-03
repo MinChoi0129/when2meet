@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환경설정</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', path='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/myPage/setting.css') }}">
+    <script src="{{ url_for('static', path='js/myPage/setting.js') }}" defer></script>
+</head>
+
+<body>
+    <p class="top_nav_bar">로그아웃&nbsp;<i style="color: #164DCA;" class="fas fa-sign-in-alt"></i></p>
+    <div class="left_section">
+        <img src="{{ url_for('static', path='image/logo.png') }}" alt="이때어때 로고">
+
+        <h1>마이페이지</h1>
+        <ul>
+            <li><a href="{{ url_for('myGroups') }}">그룹 목록</a></li>
+            <li><a href="{{ url_for('myTable') }}">내 시간표</a></li>
+            <li><a id="selected" href="{{ url_for('setting') }}"><i class="fas fa-caret-right"></i>&nbsp;설정</a></li>
+            <li><a id="byesick" href="경로">회원탈퇴&nbsp;<i class="fas fa-sign-in-alt"></i></a></li>
+        </ul>
+    </div>
+    <div class="right_section">
+
+
+    </div>
+    <div class="right_menu">
+        <div onclick="profile()" class="right_menu_item">프로필&ensp;&ensp;&ensp;&ensp;<i class="fas fa-plus-circle"></i>
+        </div>
+        <div onclick="design()" class="right_menu_item">모양&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;<i
+                class="fas fa-plus-circle"></i></div>
+    </div>
+    <i class="info_btn fas fa-info-circle"></i>
+</body>
+
+</html>

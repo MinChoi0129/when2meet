@@ -146,8 +146,22 @@ body {
 .groupList {
     overflow: scroll;
     overflow-x: hidden;
-    height: 40vh;
+    height: 50vh;
     margin-top: 1rem;
+}
+
+.groupList::-webkit-scrollbar {
+    width: 5px;
+}
+
+.groupList::-webkit-scrollbar-thumb {
+    height: 20%;
+    background: #d9d9d9;
+    border-radius: 14px;
+}
+
+.groupList::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 1);
 }
 
 .group {

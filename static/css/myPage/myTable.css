@@ -134,3 +134,7 @@ body {
     font-size: 40px;
     color: #164DCA;
 }
+
+.right_menu_item:hover {
+    cursor: pointer
+}

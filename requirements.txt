@@ -1,4 +1,4 @@
-fastApi
+fastapi
 uvicorn
 sqlalchemy
 pymysql
@@ -6,3 +6,5 @@ alembic
 jinja2
 sqlalchemy_imageattach
 Wand
+numpy
+opencv-python

@@ -181,3 +181,17 @@ body {
     font-size: 40px;
     color: #164DCA;
 }
+
+.right_menu_item:hover {
+    cursor: pointer;
+}
+
+.filterinput {
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Pretendard';
+    text-align: left;
+    outline: none;
+}
