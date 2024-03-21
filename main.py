@@ -1,7 +1,7 @@
 from typing import Union
 from fastapi import FastAPI, HTTPException, Depends, Request
 from sqlalchemy.orm import Session
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from models import Group, User
@@ -30,10 +30,14 @@ def index(request: Request):
     return templates.TemplateResponse(request=request, name="index.html")
 
 
+@w2m.get('/favicon.ico', include_in_schema=False)
+def favicon():
+    return FileResponse("favicon.ico")
+
+
 @w2m.get("/myGroup/{invitation_code}", response_class=HTMLResponse)
 def groupPage(request: Request, invitation_code: str):
-    print(invitation_code, "로 접속 중")
-    return templates.TemplateResponse(request=request, name="groupPage/groupPage.html")
+    return templates.TemplateResponse(request=request, name="groupPage/groupPage.html", invitation_code=invitation_code)
 
 
 @w2m.get("/myGroups", response_class=HTMLResponse)

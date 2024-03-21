@@ -125,6 +125,7 @@ body {
     right: 6rem;
     text-align: right;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .info_btn {

@@ -8,3 +8,7 @@ class User(BaseModel):
     birthDay: str
     email: str
     groups: List[dict] | None = None
+
+
+class UserTables(BaseModel):
+    ids: List[str]

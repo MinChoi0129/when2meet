@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Python Debugger: FastAPI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:w2m", "--reload"],
+      "jinja": true
+    }
+  ]
+}

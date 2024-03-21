@@ -8,3 +8,4 @@ sqlalchemy_imageattach
 Wand
 numpy
 opencv-python
+python-multipart

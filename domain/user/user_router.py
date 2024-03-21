@@ -5,6 +5,7 @@ from models import User
 from typing import List
 from database import get_db
 from domain.user import user_schema
+from TableDetector.table_detection import TableManager
 
 router = APIRouter(
     prefix="/user",
@@ -49,3 +50,8 @@ def get_user_by_code(id: str, db: Session = Depends(get_db)):
         joinedload(User.groups)).first()
     user_dict = user_to_dict(user)
     return user_dict
+
+
+@router.post("/timetable")
+def get_users_timetable_by_ids(user_ids: user_schema.UserTables):
+    return TableManager.groupUnavailableDatetimes(user_ids.ids)

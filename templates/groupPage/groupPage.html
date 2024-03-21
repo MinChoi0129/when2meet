@@ -1,195 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마이페이지</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ url_for('static', path='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/groupPage/groupPage.css') }}">
-    <script src="{{ url_for('static', path='js/groupPage/groupPage.js') }}" defer></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/groupPage/groupPage.css') }}"
+    />
+    <script
+      src="{{ url_for('static', path='js/groupPage/groupPage.js') }}"
+      defer
+    ></script>
+  </head>
 
-<body>
-    <p class="top_nav_bar">로그아웃&nbsp;<i style="color: #164DCA;" class="fas fa-sign-in-alt"></i></p>
+  <body>
+    <a style="color: black" href="/logout"
+      ><p class="top_nav_bar">
+        로그아웃&nbsp;<i
+          style="color: #164dca"
+          class="fas fa-sign-in-alt"
+        ></i></p
+    ></a>
     <div class="left_section">
-        <img src="{{ url_for('static', path='image/logo.png') }}" alt="이때어때 로고">
+      <img
+        src="{{ url_for('static', path='image/logo.png') }}"
+        alt="이때어때 로고"
+      />
 
-        <p class="category">그룹명</p>
-        <h3>멋쟁이사자처럼</h3>
+      <p class="category">그룹명</p>
+      <h3>멋쟁이사자처럼</h3>
 
-        <p class="category">초대코드</p>
-        <h3>likelionss</h3>
+      <p class="category">초대코드</p>
+      <h3>likelionss</h3>
 
-        <p class="category">팀원</p>
-        <div class="teammates">
-            <div class="teammate_element">
-                <i class="far fa-user-circle"></i>
-                <div class="username">이멋사</div>
-            </div>
-            <div class="teammate_element">
-                <i class="far fa-user-circle"></i>
-                <div class="username">이캬캬</div>
-            </div>
-            <div class="teammate_element">
-                <i class="far fa-user-circle"></i>
-                <div class="username">김코코짱</div>
-            </div>
-            <div class="teammate_element">
-                <i class="far fa-user-circle"></i>
-                <div class="username">야호</div>
-            </div>
-            <div class="teammate_element">
-                <i class="far fa-user-circle"></i>
-                <div class="username">크크크크크크</div>
-            </div>
+      <p class="category">팀원</p>
+      <div class="teammates">
+        <div class="teammate_element">
+          <i class="far fa-user-circle"></i>
+          <div class="username">이멋사</div>
         </div>
+        <div class="teammate_element">
+          <i class="far fa-user-circle"></i>
+          <div class="username">이캬캬</div>
+        </div>
+        <div class="teammate_element">
+          <i class="far fa-user-circle"></i>
+          <div class="username">김코코짱</div>
+        </div>
+        <div class="teammate_element">
+          <i class="far fa-user-circle"></i>
+          <div class="username">야호</div>
+        </div>
+        <div class="teammate_element">
+          <i class="far fa-user-circle"></i>
+          <div class="username">크크크크크크</div>
+        </div>
+      </div>
 
-        <div class="byesicGroup">그룹 탈퇴</div>
+      <div class="byesicGroup">그룹 탈퇴</div>
     </div>
     <div class="right_section">
-        <div class="days">
-            <div class="day"></div>
-            <div class="day">월</div>
-            <div class="day">화</div>
-            <div class="day">수</div>
-            <div class="day">목</div>
-            <div class="day">금</div>
-            <div style="color: #164DCA;" class="day">토</div>
-            <div style="color: #FF0000;" class="day">일</div>
-        </div>
-        <div class="row">
-            <div class="time">09</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">10</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">11</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">12</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">13</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">14</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">15</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">16</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-        <div class="row">
-            <div class="time">17</div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-            <div class="tableElement"></div>
-        </div>
-
+      <div class="days">
+        <div class="day"></div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div style="color: #164dca" class="day">토</div>
+        <div style="color: #ff0000" class="day">일</div>
+      </div>
+      <div class="row">
+        <div class="time">09</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">10</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">11</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">12</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">13</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">14</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">15</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">16</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
+      <div class="row">
+        <div class="time">17</div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+        <div class="tableElement"></div>
+      </div>
     </div>
     <div class="right_menu">
-        <div class="right_menu_item">
-            <select name="date_sort" class="filterinput">
-                <option value="none"> 최소 인원 설정 </option>
-                <option value="1">최소 인원 : 1</option>
-                <option value="2">최소 인원 : 2</option>
-                <option value="3">최소 인원 : 3</option>
-                <option value="4">최소 인원 : 4</option>
-                <option value="5">최소 인원 : 5</option>
-                <option value="6">최소 인원 : 6</option>
-                <option value="7">최소 인원 : 7</option>
-                <option value="8">최소 인원 : 8</option>
-            </select>
+      <div class="right_menu_item">
+        <select name="date_sort" class="filterinput">
+          <option value="1">최소 인원 : 1</option>
+          <option value="2">최소 인원 : 2</option>
+          <option value="3">최소 인원 : 3</option>
+          <option value="4">최소 인원 : 4</option>
+          <option value="5">최소 인원 : 5</option>
+          <option value="6">최소 인원 : 6</option>
+          <option value="7">최소 인원 : 7</option>
+          <option value="8">최소 인원 : 8</option>
+        </select>
+      </div>
+      <div style="height: 14rem; padding-top: 1rem" class="right_menu_item">
+        <div class="priority">
+          <div
+            style="width: 16px; height: 16px; background-color: #164dca"
+          ></div>
+          <div style="margin-left: 1rem">1순위</div>
         </div>
-        <div style="height: 14rem; padding-top: 1rem" class="right_menu_item">
-            <div class="priority">
-                <div style="width: 16px; height: 16px; background-color: #164DCA;"></div>
-                <div style="margin-left: 1rem;">1순위</div>
-            </div>
-            <div class="priority">
-                <div style="width: 16px; height: 16px; background-color: #BDC5FF;"></div>
-                <div style="margin-left: 1rem;">2순위</div>
-            </div>
-            <div class="priority">
-                <div style="width: 16px; height: 16px; background-color: #F0EDFF;"></div>
-                <div style="margin-left: 1rem;">3순위</div>
-            </div>
-            <div class="priority">
-                <div style="width: 16px; height: 16px; background-color: #F6F7F9;"></div>
-                <div style="margin-left: 1rem;">불가</div>
-            </div>
+        <div class="priority">
+          <div
+            style="width: 16px; height: 16px; background-color: #bdc5ff"
+          ></div>
+          <div style="margin-left: 1rem">2순위</div>
         </div>
-        <div onclick="uploadTable()" class="right_menu_item">시간표 업로드&nbsp;<i class="fas fa-plus-circle"></i></div>
-        <div onclick="shareTable()" class="right_menu_item">공유하기&emsp;&emsp;&nbsp;<i class="fas fa-plus-circle"></i>
+        <div class="priority">
+          <div
+            style="width: 16px; height: 16px; background-color: #f0edff"
+          ></div>
+          <div style="margin-left: 1rem">3순위</div>
         </div>
-        <div onclick="saveImage()" class="right_menu_item">이미지 저장&emsp;&nbsp;<i class="fas fa-plus-circle"></i></div>
+        <div class="priority">
+          <div
+            style="width: 16px; height: 16px; background-color: #f6f7f9"
+          ></div>
+          <div style="margin-left: 1rem">불가</div>
+        </div>
+      </div>
+      <div onclick="uploadTable()" class="right_menu_item">
+        시간표 업로드&nbsp;<i class="fas fa-plus-circle"></i>
+      </div>
+      <div onclick="shareTable()" class="right_menu_item">
+        공유하기&emsp;&emsp;&nbsp;<i class="fas fa-plus-circle"></i>
+      </div>
+      <div onclick="saveImage()" class="right_menu_item">
+        이미지 저장&emsp;&nbsp;<i class="fas fa-plus-circle"></i>
+      </div>
     </div>
     <i class="info_btn fas fa-info-circle"></i>
-</body>
-
+  </body>
 </html>

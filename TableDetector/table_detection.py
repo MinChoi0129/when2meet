@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+from copy import deepcopy
 
 
 class TableManager:
@@ -169,7 +170,7 @@ class TableManager:
 
     @staticmethod
     def groupUnavailableDatetimes(user_ids: list[str]):
-        unavailable_datetimes = TableManager.EMPTY_TABLE
+        unavailable_datetimes = deepcopy(TableManager.EMPTY_TABLE)
         for user_id in user_ids:
             img_path = os.path.join(
                 TableManager.BASE_PATH, "media", "iphone", f"{user_id}.jpg")  # 여기 경로 세팅 상황에 맞게 변경해야함.
@@ -179,7 +180,8 @@ class TableManager:
         return unavailable_datetimes
 
 
-os.system("cls")
-user_ids = ["5_dark", "6_white", "7_white"]
-timetable = TableManager.groupUnavailableDatetimes(user_ids)
-TableManager.printTable(timetable)
+# os.system("cls")
+# user_ids = ["5_dark", "6_white", "7_white"]
+# device_types = ["iphone", "galaxy"]
+# timetable = TableManager.groupUnavailableDatetimes(device_types[0], user_ids)
+# TableManager.printTable(timetable)

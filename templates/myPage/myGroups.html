@@ -1,106 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마이페이지</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ url_for('static', path='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/myPage/myGroups.css') }}">
-    <script src="{{ url_for('static', path='js/myPage/myGroups.js') }}" defer></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/myPage/myGroups.css') }}"
+    />
+    <script
+      src="{{ url_for('static', path='js/myPage/myGroups.js') }}"
+      defer
+    ></script>
+  </head>
 
-<body>
-    <p class="top_nav_bar">로그아웃&nbsp;<i style="color: #164DCA;" class="fas fa-sign-in-alt"></i></p>
+  <body>
+    <a style="color: black" href="/logout">
+      <p class="top_nav_bar">
+        로그아웃&nbsp;<i
+          style="color: #164dca"
+          class="fas fa-sign-in-alt"
+        ></i></p
+    ></a>
     <div class="left_section">
+      <img
+        src="{{ url_for('static', path='image/logo.png') }}"
+        alt="이때어때 로고"
+      />
 
-        <img src="{{ url_for('static', path='image/logo.png') }}" alt="이때어때 로고">
-
-        <h1>마이페이지</h1>
-        <ul>
-            <li><a id="selected" href="{{ url_for('myGroups') }}"><i class="fas fa-caret-right"></i>&nbsp;그룹 목록</a></li>
-            <li><a href="{{ url_for('myTable') }}">내 시간표</a></li>
-            <li><a href="{{ url_for('setting') }}">설정</a></li>
-            <li><a id="byesick" href="경로">회원탈퇴&nbsp;<i class="fas fa-sign-in-alt"></i></a></li>
-        </ul>
+      <h1>마이페이지</h1>
+      <ul>
+        <li>
+          <a id="selected" href="{{ url_for('myGroups') }}"
+            ><i class="fas fa-caret-right"></i>&nbsp;그룹 목록</a
+          >
+        </li>
+        <li><a href="{{ url_for('myTable') }}">내 시간표</a></li>
+        <li><a href="{{ url_for('setting') }}">설정</a></li>
+        <li>
+          <a id="byesick" href="경로"
+            >회원탈퇴&nbsp;<i class="fas fa-sign-in-alt"></i
+          ></a>
+        </li>
+      </ul>
     </div>
     <div class="right_section">
-        <div class="filters">
-            <div class="filter sortfilter">
-                <select name="date_sort" class="filterinput">
-                    <option value="none"> 정렬 날짜 </option>
-                    <option value="0">오름차순</option>
-                    <option value="1">내림차순</option>
-                </select>
-            </div>
-            <div class="filter sortfilter">
-                <select name="shape_sort" class="filterinput">
-                    <option value="none"> 정렬 모양 </option>
-                    <option value="0">오름차순</option>
-                    <option value="1">내림차순</option>
-                </select>
-            </div>
-            <div class="filter searchfilter"><input class="searchinput" type="text" placeholder="그룹 검색"><i
-                    style="transform: translate(1rem, 0);" class="fas fa-search"></i></div>
+      <div class="filters">
+        <div class="filter sortfilter">
+          <select name="date_sort" class="filterinput">
+            <option value="none">정렬 날짜</option>
+            <option value="0">오름차순</option>
+            <option value="1">내림차순</option>
+          </select>
         </div>
-        <div class="groupList">
-            <div class="group">
-                <div class="checkBoxImg">
-                    <div class="circle"></div>
-                </div>
-                <div class="titleAndMembers">
-                    <div class="title">기초설계 프로젝트 회의</div>
-                    <div class="members">김멋사, 홍길동, 김영희, 박사자</div>
-                </div>
-                <div class="favoriteAndOption">
-                    <div class="favorite"><i class="far fa-star"></i></div>
-                    <div class="option"><i class="fas fa-ellipsis-v"></i></div>
-                </div>
-            </div>
-            <div class="group">
-                <div class="checkBoxImg">
-                    <div class="circle"></div>
-                </div>
-                <div class="titleAndMembers">
-                    <div class="title">멋쟁이사자처럼 회의</div>
-                    <div class="members">김멋사, 홍길동, 김영희, 박사자</div>
-                </div>
-                <div class="favoriteAndOption">
-                    <div class="favorite"><i class="far fa-star"></i></div>
-                    <div class="option"><i class="fas fa-ellipsis-v"></i></div>
-                </div>
-            </div>
-            <div class="group">
-                <div class="checkBoxImg">
-                    <div class="circle"></div>
-                </div>
-                <div class="titleAndMembers">
-                    <div class="title">김멋사 생일 만남</div>
-                    <div class="members">김멋사, 홍길동, 박사자</div>
-                </div>
-                <div class="favoriteAndOption">
-                    <div class="favorite"><i class="far fa-star"></i></div>
-                    <div class="option"><i class="fas fa-ellipsis-v"></i></div>
-                </div>
-            </div>
-            <div class="group">
-                <div class="checkBoxImg">
-                    <div class="circle"></div>
-                </div>
-                <div class="titleAndMembers">
-                    <div class="title">김멋사 파티</div>
-                    <div class="members">김멋사</div>
-                </div>
-                <div class="favoriteAndOption">
-                    <div class="favorite"><i class="far fa-star"></i></div>
-                    <div class="option"><i class="fas fa-ellipsis-v"></i></div>
-                </div>
-            </div>
+        <div class="filter sortfilter">
+          <select name="shape_sort" class="filterinput">
+            <option value="none">정렬 모양</option>
+            <option value="0">오름차순</option>
+            <option value="1">내림차순</option>
+          </select>
         </div>
+        <div class="filter searchfilter">
+          <input class="searchinput" type="text" placeholder="그룹 검색" /><i
+            style="transform: translate(1rem, 0)"
+            class="fas fa-search"
+          ></i>
+        </div>
+      </div>
+      <div class="groupList">
+        <div class="group">
+          <div class="checkBoxImg">
+            <div class="circle"></div>
+          </div>
+          <div class="titleAndMembers">
+            <div class="title">
+              <a class="title" href="/myGroup/1234">기초설계 프로젝트 회의</a>
+            </div>
+            <div class="members">김멋사, 홍길동, 김영희, 박사자</div>
+          </div>
+          <div class="favoriteAndOption">
+            <div class="favorite"><i class="far fa-star"></i></div>
+            <div class="option"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="checkBoxImg">
+            <div class="circle"></div>
+          </div>
+          <div class="titleAndMembers">
+            <a class="title" href="/myGroup/1234">멋쟁이사자처럼 회의</a>
+            <div class="members">김멋사, 홍길동, 김영희, 박사자</div>
+          </div>
+          <div class="favoriteAndOption">
+            <div class="favorite"><i class="far fa-star"></i></div>
+            <div class="option"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="checkBoxImg">
+            <div class="circle"></div>
+          </div>
+          <div class="titleAndMembers">
+            <a class="title" href="/myGroup/1234">김멋사 생일 만남</a>
+            <div class="members">김멋사, 홍길동, 박사자</div>
+          </div>
+          <div class="favoriteAndOption">
+            <div class="favorite"><i class="far fa-star"></i></div>
+            <div class="option"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="checkBoxImg">
+            <div class="circle"></div>
+          </div>
+          <div class="titleAndMembers">
+            <a class="title" href="/myGroup/1234">김멋사 파티</a>
+            <div class="members">김멋사</div>
+          </div>
+          <div class="favoriteAndOption">
+            <div class="favorite"><i class="far fa-star"></i></div>
+            <div class="option"><i class="fas fa-ellipsis-v"></i></div>
+          </div>
+        </div>
+      </div>
     </div>
     <i class="info_btn fas fa-info-circle"></i>
-</body>
-
+  </body>
 </html>
