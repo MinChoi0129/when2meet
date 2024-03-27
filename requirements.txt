@@ -5,4 +5,11 @@ pymysql
 alembic
 jinja2
 sqlalchemy_imageattach
-Wand
+Wanda
+autopep8
+pydantic[email]
+passlib[bcrypt]
+starlette
+bcrypt
+python-multipart
+python-jose[cryptography]

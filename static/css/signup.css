@@ -1,0 +1,204 @@
+/* CSS 기본 설정 */
+@font-face {
+    font-weight: 300;
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+    font-weight: 800;
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body, main, div, img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ol, ul, li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+.unactive {
+    display: none !important;
+}
+/* 배경 색 */
+body {
+    background-color: #F3F3F3;
+}
+.signupContainer {
+    padding: 7.4vh 14vw 0 14vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+/* top text */
+.signupTopText {
+    font-family: 'Pretendard-ExtraBold';
+    font-size: 1.58vw;
+    padding-bottom: 4.2vh;
+}
+/* 폼 요소들 */
+.signupContainer form {
+    width: 39vw;
+    height: 78vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+}
+.signupContainer .inputGroup {
+    margin-bottom: 4.1vh;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'pretendard-Medium';
+    font-size: 1rem;
+    align-items: center;
+}
+.inputGroup .form-control {
+    
+    width: 29.1vw;
+    height: 6.3vh;
+    border-radius: 1rem;
+    border: none;
+    padding-left: 1rem; 
+    font-size: 0.9vw; 
+}
+.signupContainer button[type="submit"] {
+    width: 100%;
+}
+.inputGroup input::placeholder {
+    color: #b8b8b8; 
+    font-style: italic; 
+    font-family: 'pretendard-light';
+    font-size: small;
+}
+
+label{
+    display: flex;
+}
+.star{
+    color: #164DCA;
+}
+.imgExplain{
+    color: #747474;
+    font-family: 'pretendard-Light';
+    font-size: 0.8vw;
+    position: absolute;
+    transform: translate(21.92vw, 18.98vh);
+}
+.agreement{
+    display: flex;
+    height: 2.6vh;
+    justify-content: space-between;
+    font-family: 'pretendard-medium';
+    font-size: 0.8vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 체크박스 숨김 */
+.agreement input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 체크박스 디자인 */
+.agreement input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+/* 체크박스 체크마크 */
+.agreement input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.9vw;
+    height: 1.6vh; 
+    border: 2px solid #ccc; 
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* 체크박스 체크마크 활성화 스타일 */
+.agreement input[type="checkbox"]:checked + label:before {
+    background-color: #2196F3; 
+    border-color: #2196F3;
+}
+
+/* 체크박스 체크마크 심볼 */
+.agreement input[type="checkbox"] + label:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* 체크박스 체크마크 활성화 시 심볼 */
+.agreement input[type="checkbox"]:checked + label:after {
+    display: block;
+    left: 5px; 
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white; 
+    border-width: 0 2px 2px 0; 
+    transform: rotate(45deg); 
+}
+
+.seeAgreement{
+    color: #8D8D8D;
+    font-family: 'pretendard-medium';
+    font-size: 0.9vw;
+    text-decoration: underline;
+
+}
+/* 가입하기 버튼 */
+.subBtn{
+    height: 5.6vh;
+    padding: 0 6vw 0 6vw;
+    background-color: #B5B5B5;
+    color: white;
+    font-family: 'Pretendard-Medium';
+    font-size: 1.3vw;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+}

@@ -1,0 +1,123 @@
+/* css 기본 설정 */
+@font-face {
+    font-weight: 300;
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+    font-weight: 800;
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body, main, div ,img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ol, ul,li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.unactive {
+    display: none !important;
+}
+
+
+.menuContainer{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+}
+.menuBox{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -100;
+    position: absolute;
+}
+
+
+.boxmenu{
+    width: 30.25vw;
+    height: 60.900000000000006vh;
+    background-color: white;
+    border-radius: 9.5rem;
+    margin: auto;
+    padding: 8.8vh 3.125vw 0 3.125vw;
+    transform: translate(31vw, 14vh);
+}
+
+
+.topLine{
+    display: flex;
+    justify-content: space-between;
+}
+.topLine .text{
+    font-family: 'pretendard-bold';
+    font-size: 1.5vw;
+
+}
+
+
+.menus{
+
+}
+
+.menusText{
+    font-size: 1.2vw;
+    font-family: 'pretendard-regular';
+
+}
+.menusBtn{
+    width: 2vw;
+    height: 4vh;
+}
+
+.menuIndi{
+    display: flex;
+    justify-content: space-between;
+    margin: 6vh 0 -1vh 0;
+}
+.closeBtn{
+    cursor: pointer;
+}

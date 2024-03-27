@@ -2,48 +2,58 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W2M</title>
-    <script>
-        let groupList = []
+            <!--              favicon            -->
+            <link
+            rel="icon"
+            href="{{ url_for('static', path='image/logo.png') }}"
+            type="image/x-icon"
+            />
+        <!--              css               -->
+        <link rel="stylesheet" href="/static/css/index.css">
+        <!--              js                -->
+        <script type="module" src="{{ url_for('static', path='js/menu.js') }}"defer></script>
+        <script type="module" src="{{ url_for('static', path='js/nav.js') }}"defer></script>
+        <script type="module" src="{{ url_for('static', path='js/index.js') }}" defer></script>
+        <script type="module" src="{{ url_for('static', path='js/login.js') }}" defer></script>
 
-        function getGroupList() {
-            fetch("http://127.0.0.1:8000/group")
-                .then((response) => {
-                    return response.json();
-                    console.log(response)
-                })
-                .then((json) => {
-                    groupList = json;
-                    console.log(groupList)
-                    displayGroupList();
-                })
-                    }
-
-        function displayGroupList() {
-            const listContainer = document.getElementById("groupList");
-
-            // Clear previous content
-            listContainer.innerHTML = "";
-
-            // Iterate through groupList and append each item to the list
-            groupList.forEach(group => {
-                const listItem = document.createElement("li");
-                listItem.textContent = group.name;
-                listContainer.appendChild(listItem);
-            });
-        }
-
-        // Attach the getGroupList function to the DOMContentLoaded event
-        document.addEventListener("DOMContentLoaded", getGroupList);
-    </script>
 </head>
 
 <body>
-    간단한게 적어본 데이터가져와서 쓰기
-    <ul id="groupList"></ul>
+    <!-- nav 자리 -->
+    {% include "nav.html" %}
+
+
+    <!-- index Page 자리-->
+    <div class="indexContainer">
+        <div class="subTitle">쉬워지는 일정잡기.</div>
+        <div class="mainTitle">사진 하나로 만드는 우리 모임,<br><span class="highlight">이때? 어때!</span> </div>
+        <div class="explain">이때 어때는 복잡한 일정 잡기 대화를 시각적으로 보여줍니다.<br>초대코드 생성 혹은 참여 후 시간표를 업로드 해주세요!</div>
+        <div class="sumnail">
+
+            <ul class="pagination">
+                <li class="active" data-index="1"><img class="sumnailImg" src="{{ url_for('static', path='image/1.png') }}"></li>
+                <li data-index="2"><img class="sumnailImg"  src="{{ url_for('static', path='image/2.png') }}"></li>
+                <li data-index="3"><img class="sumnailImg"  src="{{ url_for('static', path='image/3.png') }}"></li>
+            </ul>
+
+        </div>
+        <div class="button">
+            <div class="make">그룹 생성</div>
+            <div class="join">그룹 참가</div>
+        </div>
+    </div>
+
+    <!-- groupIn modal 자리 -->
+    <div class="groupinModal unactive">
+        {% include "groupin.html" %}
+    </div>
+    <!-- groupMake modal 자리 -->
+    <div class="groupmakeModal unactive">
+        {% include "groupmake.html" %}
+    </div>
+
 </body>
 
 </html>
-dfdf

@@ -1,0 +1,175 @@
+/* css 기본 설정 */
+@font-face {
+    font-weight: 300;
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+    font-weight: 800;
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body, main, div ,img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ol, ul,li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.unactive {
+    display: none !important;
+}
+
+
+.loginContainer{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 9;
+}
+.outBox{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -100;
+    position: absolute;
+}
+
+
+.box{
+    width: 31.25vw;
+    height: 69.9vh;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: auto;
+    padding:8.8vh 3.125vw 0 3.125vw;
+    
+}
+
+
+.topLine{
+    display: flex;
+    justify-content: space-between;
+}
+.topLine .text{
+    font-family: 'pretendard-bold';
+    font-size: 1.5vw;
+
+}
+.formClass{
+    margin-top: 10vh;
+
+}
+.postForm{
+    height: 4.6vh;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-top: 1vh;
+    font-family: 'pretendard-medium';
+    font-size: large;
+    
+}
+.postForm:focus {
+    outline: none; 
+    border: none; 
+    border-bottom: 1px solid black;
+
+}
+.postForm::placeholder{
+    font-size: small;
+    color: #ccc;
+    font-family: 'pretendard-light';
+
+}
+.idPwLabel {
+    margin-top: 4.1vh;
+    display: block;
+    font-family: 'pretendard-medium';
+    color: #676767;
+
+}
+
+
+.rememberCheck{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-top: 2vh;
+    cursor: pointer;
+}
+
+
+
+.submit{
+    border: none;
+    height: 6.1vh;
+    width: 100%;
+    border-radius: 2.5rem;
+    background: #B5B5B5;
+    color: white;
+    font-size: 1.25vw;
+    font-family: 'Pretendard-semiBold';
+    margin-top: 9vh;
+    cursor: pointer;
+
+}
+
+
+
+.bottomLine{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3vh;
+    font-size: 1vw;
+    font-family: 'pretendard-medium';
+    color: #989898;
+    cursor: pointer;
+
+    
+}
+.closeBtn{
+    cursor: pointer;
+}

@@ -1,0 +1,58 @@
+   <body>
+   <div class="navContainer">
+        <!--              css               -->
+        <link rel="stylesheet" href="/static/css/nav.css">
+
+        <!-- 로그인 전( before tag ) -->
+        <div class="nav_container beforeLogin ">
+            <a href="http://127.0.0.1:8099/"><img class="imgBox"src="/static/image/logo.png"> </a>
+            
+            <div class="loginBox">
+                <div class="loginInnerBox login">
+                    <div class="text">로그인</div>
+                    <div class="img"><img class ="gnbIcon"src="/static/image/gnb_login_btn.svg"></div>
+                </div>
+                <a href="http://127.0.0.1:8099/signup"><div class="loginInnerBox register">
+                    <div class="text">회원가입</div>
+                    <div class="img"><img class ="gnbIcon"src="/static/image/gnb_login_btn.svg"></div>
+                </div></a>
+
+            </div>
+
+            <div class="footerBtn">
+                <img class="help unactive" src="/static/image/help_btn.svg">
+                <img class="menu" src="/static/image/menu_btn.svg">
+            </div>
+
+        </div>
+
+
+        <!-- 로그인 후 -->
+        <div class="nav_container afterLogin unactive">
+            <a href="http://127.0.0.1:8099/">
+                <img class="imgBox"src="/static/image/logo.png"> </a>
+
+            <div class="loginBox">
+                <a href="http://127.0.0.1:8099/logout"class="loginInnerBox logout">
+                    <div class="text">로그아웃</div>
+                    <div class="img"><img class ="gnbIcon" src="/static/image/gnb_login_btn.svg"></div>
+                </a>
+            </div>
+            <div class="footerBtn">
+                <img class="help unactive" src="/static/image/help_btn.svg">
+                <img class="menu" src="/static/image/menu_btn.svg">
+            </div>
+
+        </div>
+
+        <!-- login modal 자리 -->
+        <div class="loginModal unactive">
+        {% include "login.html" %}
+        </div>
+
+        <!-- menu modal 자리 -->
+        <div class="menuModal unactive">
+        {% include "menu.html" %}
+        </div>
+    </div>
+    </div></body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2M</title>
+    <!-- favicon -->
+    <link rel="icon" href="/static/image/logo.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <!-- JavaScript -->
+    <script type="module" src="/static/js/signup.js"></script>
+    <script type="module" src="/static/js/nav.js"></script>
+</head>
+<body>
+    <!-- nav 자리 -->
+    {% include "nav.html" %}
+    <!-- signup Page 자리 -->
+    <div class="signupContainer">
+        <div class="signupTopText">회원 가입</div>
+        <Error error={error} />
+        <form method="post" action="/signup/">
+            <div class="inputGroup">
+                <label for="id">아이디<div class="star">*</div></label>
+                <input placeholder="아이디를 입력해주세요." type="text" class="form-control" id="id" name="id">
+            </div>
+            <div class="inputGroup">
+                <label for="pw">비밀번호<div class="star">*</div></label>
+                <input placeholder="비밀번호를 입력해주세요." type="password" class="form-control" id="pw" name="pw"> 
+            </div>
+            <div class="inputGroup">
+                <label for="pw2">비밀번호 확인<div class="star">*</div></label>
+                <input placeholder="비밀번호를 한 번 더 입력해주세요." type="password" class="form-control" id="pw2" name="pw2">
+            </div>
+            <div class="inputGroup">
+                <label for="email">이메일<div class="star">*</div></label>
+                <input  placeholder="ex ) example@xxx.com"type="text" class="form-control" id="email" name="email">
+            </div>
+            <div class="inputGroup">
+                <label for="birthDay">생일</label>
+                <input  placeholder="ex ) 030101"type="text" class="form-control" id="birthDay" name="birthDay"> 
+            </div>
+            <div class="imgExplain">* 추후 마이페이지에서 시간표를 업로드 할 수 있습니다.</div>
+            <div class="inputGroup">
+                <label for="img">이미지</label>
+                <input type="text" class="form-control" id="img" name="img">
+            </div>
+            <div class="agreement">
+                <input type="checkbox" id="agree">
+                <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                <a class="seeAgreement" href="#">보기</a>
+            </div>
+            <button type="submit" class="btn btn-primary subBtn">가입</button>
+        </form>
+
+    </div>
+</body>
+</html>

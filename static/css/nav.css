@@ -1,0 +1,126 @@
+/* css 기본 설정 */
+@font-face {
+    font-weight: 300;
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+    font-weight: 800;
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    z-index: -999999999999;
+}
+body, main, div ,img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ol, ul,li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+
+.imgBox{
+    width: 4vw;
+    height: 4vw;
+    cursor:pointer;
+}
+.unactive {
+    display: none !important;
+}
+
+/* nav 젤 큰 box */
+.nav_container{
+    position: fixed;
+    display: flex;
+    padding: 0.8vw 0.8vw 0.8vw 2vw ;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    z-index: 999999999;
+    justify-content: space-between;
+    
+
+}
+
+/* 로그인 회원가입 로그아웃 box */
+.loginBox{
+    display: flex;
+}
+
+/* 개별 설정 */
+.loginInnerBox{
+    display: flex;
+    padding-right: 2vw;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.text{
+    padding-right: 0.5vw;
+    font-family: 'pretendard-bold';
+    font-size:0.8vw;
+    height: fit-content;
+
+}
+
+
+/* gnb icon */
+.gnbIcon{
+    width: 1vw;
+}
+.img{
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* 메뉴와 도움말 */
+.footerBtn{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 1vw;
+    right: 3vw;
+}
+.footerBtn img{
+    width: 1.8vw;
+    height:1.8vw;
+    margin-top:1vh ;
+}

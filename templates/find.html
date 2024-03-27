@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <ul id="user-list"></ul>
+
+    <script>
+        // JavaScript 코드로 사용자 목록을 가져와서 동적으로 HTML 생성
+        fetch('/user/list')
+            .then(response => response.json())
+            .then(users => {
+                const userListElement = document.getElementById('user-list');
+                users.forEach(user => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `ID: ${user.id}, Email: ${user.email}, Birthday: ${user.birthDay}`;
+                    userListElement.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching user list:', error));
+    </script>
+</body>
+</html>

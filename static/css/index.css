@@ -1,0 +1,182 @@
+.mainTitle .highlight:after {
+    content: "";
+    width: 13vw;
+    height: 10px;
+    display: inline-block;
+    background: #D9FCDB;
+    position: absolute;
+    transform:translateY(-30px);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s all;
+    animation: underlineAnimation 1.5s ease-in-out ;
+  }
+  
+  @keyframes underlineAnimation {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width:13vw
+    }
+
+  }
+  
+
+/* css 기본 설정 */
+@font-face {
+    font-weight: 300;
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+    font-weight: 600;
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+}
+@font-face {
+    font-weight: 800;
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+}
+* {
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body, main, div ,img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ol, ul,li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.unactive {
+    display: none !important;
+}
+/* 배경 반반 색 */
+body{
+    background-image: linear-gradient(to bottom, white 50%, #F3F3F3 50%); 
+    width: 100vw;    height: 100vh;}
+
+/* 전체 컨테이너  */
+.indexContainer{
+    padding:18vh 14vw 0 14vw; 
+    position: absolute;
+}
+/*메인 위 설명*/
+.subTitle{
+    height: 6vh; 
+    color:#164DCA;
+    font-family: 'pretendard-bold';
+    font-size: 1.2rem;
+}
+/* 메인 */
+.mainTitle{
+    height: 15vh;
+    font-family: 'pretendard-ExtraBold';
+    font-size: 3rem;
+} 
+/* 메인 아래 설명 */
+.explain{
+    font-family: 'pretendard-light';
+    font-size: 1rem;
+} 
+/* 미리보기 */
+.sumnail{
+    position: absolute;
+    transform: translate(40vw, -10vh);
+    width: 35vw;
+    height: 38vh;
+    box-shadow: 0 4px 15.3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 2rem;
+
+
+}
+/* 버튼 전체 */
+.button {
+    margin:16vh 0 0 0;
+}   
+    /* 그룹 만들기 버튼 */
+    .make,.join{
+        background-color: white;
+        width: 14vw;
+        height: 6vh;
+        text-align: center;
+        font-family: 'Pretendard-SemiBold';
+        font-size: larger;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20vw;
+        margin-bottom: 2rem;
+        cursor: pointer;
+
+    } 
+
+    .groupinModal{
+        display: flex;
+        position: absolute;
+    }
+
+
+/* slider */
+.sumnail ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.sumnail ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0; /* 이미지를 초기에 숨깁니다. */
+    transition: opacity 0.5s ease;
+}
+
+.sumnail ul li.active {
+    opacity: 1; /* 활성 이미지만 표시됩니다. */
+}
+
+.sumnailImg{
+    width: 35vw;
+    height: 38vh;
+    border-radius: 2rem;
+
+}

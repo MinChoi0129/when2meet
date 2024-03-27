@@ -1,0 +1,27 @@
+    <!--              css               -->
+    <link rel="stylesheet" href="/static/css/groupmake.css"> 
+    <script type="module" src="/static/js/index.js"></script>
+
+
+    <div class="groupmakeContainer">
+        <div class="outBox"></div>
+
+        <div class="boxmake">
+            <div class="topLine">
+                <div class="text">그룹 생성</div>
+                <img class="closeBtn" src="/static/image/close_btn.svg">
+            </div>
+            <div class="explainTitle">새로운 그룹을 생성 해보세요.<br>
+                중복된 코드는 생성 불가능 합니다.</div>
+            
+            <form class="formClass" method="post" action="http://127.0.0.1:8000/" id="loginForm">
+                <label for="code" class="codeInput code">그룹 초대코드</label><input class="postForm" type="text" id="code" name="code" placeholder="코드를 입력하세요.">
+                <label for="codePw" class="codeInput codePw">그룹 비밀번호</label><input  class="postForm" type="password"id="codePw" name="codePw" placeholder="그룹 비밀번호를 입력하세요.">
+                <label for="code2Pw" class="codeInput code2Pw">그룹 비밀번호 재확인</label><input  class="postForm" type="password"id="code2Pw" name="code2Pw" placeholder="그룹 비밀번호를 다시 입력하세요.">
+                <input class="submit" type="submit" value="참여">
+            </form>
+
+        
+        </div>
+    </div>
+
